@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>СКРИПТОВІ МОВИ_ЛР: 0</title>
+</head>
+<body>
+    <h2 lang="ua">СКРИПТОВІ МОВИ ПРОГРАМУВАННЯ: Лабораторна Робота № 0</h2>
+    
+
+    <p lang="ua">1. Відображення на сторінці в браузері вікна - ЗОВНІШНІЙ скрипт</p>
+       <script src="/alert_script.js"></script>
+     
+    
+    <p lang="ua">2. Відображення на сторінці в браузері вікна - ВНУТРІШНІЙ скрипт</p>
+       <script lang="ua">
+        alert('Увага! Виконання лаборатнорної работи №0! (ВНУТРІШНІЙ скрипт)');
+    </script>
+    
+
+    <p lang="ua">3. Відображення функції виводу ПІБ та контактної шнформації</p>
+       <script src="/alert_exercise.js"></script>
+
+    <p lang="ua">3. Операції - ВНУТРІШНІЙ скрипт</p>
+       <ul>
+           <li>з ТІЛЬКИ числами</li>
+                <script>
+                       alert(45-15);                     // 30
+                       alert(12 + 8);                    // 20
+                       alert(100/2);                     // 50
+                       alert(10*20);                     // 200
+                </script>
+
+           <li>з НЕ (НЕ ТІЛЬКИ) числами</li>
+                <script>
+                       alert('Tomato' - 15);            // NaN
+                       alert('Tomato' + ' ' + 'red');   // Tomato + Пробіл + red
+                       alert('All types of vegetables' + ' ' + 'except tomato'); // All types of vegetables + Пробіл + tomato
+                       alert('Tomato' * 2);             // NaN
+                </script> 
+        
+           <li>ЧИСЛОВІ ПЕРЕТВОРЕННЯ</li>
+                <script>
+                        alert(Number('2020'));           // 2020
+                        alert(Number('28th October 2020')); // NaN
+                        alert(Number(true));             // 1 (Тому що UNDEFINED Nan true = 1)
+                        alert(Number(false));            // 0 (Тому що UNDEFINED Nan false = 0)
+                </script>
+
+           <li>ЛОГІЧНІ ПЕРЕТВОРЕННЯ</li>
+                <script>
+                        alert(Boolean('2020'));         //true
+                        alert(Boolean('28th October 2020')); // true
+                        alert(Boolean(""));             // false - пуста string
+                        alert(Boolean('Tomato'*2));     // false - Nan
+                </script>
+        
+           <li>МАТЕМАТИКА</li>
+                <script>
+                        alert(2 + 2);                  // сума = 4
+                        alert(2 ** 2);                 // 2 в другій степені
+                        alert(2 % 2);                  // 0 залишок від ділення (після коми)
+                        alert(4 ** (1/2));             // 4 - 2 в ступіні 1/2
+
+                        alert(28 + "October");         // 28October - без пробілу
+                        alert('28' + "October");       // 28October - без пробілу
+                </script>
+
+                <script>
+                    let x = 5;
+
+                        x += 2+2;
+
+                        alert(x);                      // 9
+                </script>
+            
+                <script>
+                    let y = 5;
+
+                        alert(2 * ++y);               // 12 ( 2 * (5+1)= 12)
+                </script>
+
+           <li>ПОРІВНЯННЯ РІЗНИХ ТИПІВ</li>
+                <script>
+                        alert('Коти' > 'Собаки');     // false
+                        alert(15 < 25);               // false
+                        alert(15 > 'Коти');           // true, Коти = 4 (символи)
+                </script>
+
+        
+            
+           <li>УМОВНІ ОПЕРАТОРИ (&& ||)</li>
+                <script>  
+                     let age = prompt('How old are you?', '');
+                        if (age < 18 ) {
+                           alert('Please call your parents!');
+                        } else {
+                           alert('You are most welcome! Enjoy the show!');
+                        }  
+          
+                </script>
+
+
+                <script>
+                     let myWorkingHours = prompt('Where are you now? Enter current time', '');
+                        if (myWorkingHours >= 9 && myWorkingHours <= 18) {   // && операція "Логічне I (AND)"
+                          alert('At work!');
+                        } else {
+                          alert('Home!');
+                        }
+                </script>
+
+                <script>
+                     let splitWorkingHours = prompt('Where are you now? Enter current time', '');
+                        if (splitWorkingHours >= 9 && splitWorkingHours <= 12 || splitWorkingHours >= 16 && splitWorkingHours <= 21) {   // || операція "Логическое ИЛИ (OR)"
+                          alert('At work!');
+                        } else {
+                          alert('Home!');
+                        }
+                </script>
+        </ul>   
+            
+            <p lang="ua">4. ЦИКЛИ</p>
+        <ul>
+            <li>ЦИКЛ WHILE</li>
+                let i = 0;
+                while (i < 3) {
+                alert( i ); 
+                i++;
+                } 
+                <script>
+                     let i = 1;
+                        while (i < 3) {
+                         alert(i);
+                         i++;                        // і-- виведе числа в зворотньому порядку   3 - 2
+                        }
+                </script>
+        
+
+         
+            <li>ЦИКЛ FOR</li>
+                for (let i = 0; i < 3; i++) {
+                alert(i);
+                }  
+                <script>
+                       for (let i =1; i <3; i++)  {     // і-- виведе числа в зворотньому порядку   3 - 1
+                       alert( i );
+                       }    
+                </script>    
+        </ul>
+
+    <p lang="ua">4. SWITCH CASE</p>         
+                <script>
+                     let month = prompt('Enter the numbe of the month!');
+                         month = 3;                    // місяць № 3 - Березень (March)
+                         switch (month) {
+                                case 1:
+                                   alert( 'JANUARY' );
+                                   break;
+                                case 2:   
+                                   alert( 'FEBRUARY' );    
+                                   break;
+                                case 3:
+                                   alert('MARCH');
+                                   break;
+                                case 4:
+                                   alert('APRIL');
+                                   break; 
+                                case 5:
+                                   alert('MAY');
+                                   break;
+                                case 6:
+                                   alert('JUNE');
+                                   break;
+                                case 7:
+                                   alert('JULY');
+                                   break;
+                                case 8:
+                                   alert('AUGUST');
+                                   break;
+                                case 9:
+                                   alert('SEPTEMBER');
+                                   break;
+                                case 10:
+                                   alert('OCTOBER');
+                                   break;
+                                case 11:
+                                   alert('NOVEMBER');
+                                   break;
+                                case 12:
+                                   alert('DECEMBER');
+                                   break;
+                                default:
+                                   alert('Try again!');
+                                }
+                </script> 
+
+
+    <p lang="ua">5. Функции-"колбэки"</p>
+                <script>
+                    function agree(question, yes, no) {
+                            if (confirm(question)) yes()
+                            else no();
+                    }
+                    agree(
+                    "Are we going to continue?",
+                    function() { alert("Ok, lets go!"); },
+                    function() { alert("Maybe next time"); }
+                    );
+                </script>
+
+    <p lang="en">6. Об'єкти</p>
+                <script>
+                   let currentUser = {
+                                name: 'Iryna',
+                                surname: 'Turetska',
+                                age: 30
+                    };
+
+                    let key = prompt("Who is a current use of the computer?", "name");
+                        alert( currentUser[key] );
+                        //alert(this.name); }           
+                </script>
+
+    
+    <p lang="ua">7. Масиви</p>
+                <script>
+                    let names = ["Iryna", "Olga", "Viktor", "Stas"];
+
+                        names.pop("Stas");
+                        names.push("Alex");
+                        names.shift("Iryna");             // видалили Stat в кінці масиву, додали Alex в кінець, видалили Iryna з початку
+
+                   for (let i = 0; i < names.length; i++) {
+                       alert( names);
+                       alert( names.indexOf("Olga"));     
+                    }
+                </script>
+
+</body>
+</html>
